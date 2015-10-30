@@ -8,7 +8,7 @@ import com.google.common.collect.Multimap;
  */
 public class _02_test {
     public void teststuScoreMultimap(){
-        Multimap<String,StudentScore> scoreMultimap = ArrayListMultimap.create();
+        Multimap<String,StudentScore> scoreMultimap = ArrayListMultimap.create();// Map<String, List<StudentScore>> StudentScoreMap
         for(int i=10;i<25;i++){
             StudentScore studentScore=new StudentScore();
             studentScore.CourseId=1001+i;
