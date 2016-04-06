@@ -34,6 +34,10 @@ public class _1 {
         s.setAge(20);
         new _1().exe(s);
 
+        List<String> list = new ArrayList<>();
+        list.add("3");
+//        list.r
+
     }
 }
 

@@ -45,8 +45,8 @@ class TheThread extends Thread {
         this.example = example;
     }
 
-    public  void printThreadName() throws InterruptedException {  //虽然函数中有synchronized关键字，但是如果是不同对象执行，还是乱序
-        synchronized(Thread.class) {
+    public void printThreadName() throws InterruptedException {  //虽然函数中有synchronized关键字，但是如果是不同对象执行，还是乱序
+        synchronized(Integer.class) { //如果是
             for (int i = 0; i < 10; i++) {
                 Thread.sleep(10);
                 System.out.println(i + " Thread name =" + Thread.currentThread().getName());

@@ -16,6 +16,7 @@ public class Driver {
         for(int i=0; i<3 ; ++i)
             new Thread( new Worker(startSignal, doneSignal)).start();
         System.out.println("start---");
+        Thread.sleep(3000);
         startSignal.countDown();
 
         doneSignal.await();
@@ -36,7 +37,7 @@ class Worker implements Runnable {
     public void run() {
         try {
 //            TimeUnit.SECONDS.sleep(new Random().nextInt(3));
-            Thread.sleep(3000);
+//            Thread.sleep(3000);
             startSignal.await();
             doWork();
             doneSignal.countDown();

@@ -1,7 +1,6 @@
 package 并发编程.Daemon;
 
 
-import java.io.IOException;
 
 public class _test extends Thread {
 
@@ -12,7 +11,7 @@ public class _test extends Thread {
      * 线程的run方法，它将和其他线程同时运行
      */
     public void run() {
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 30; i++) {
             try {
                 Thread.sleep(100);
 
@@ -25,6 +24,7 @@ public class _test extends Thread {
 
     public static void main(String[] args) {
         _test test = new _test();
+        test.setDaemon(true);
         // 如果不设置daemon，那么线程将输出100后才结束
 //        test.setDaemon(true);
         test.start();

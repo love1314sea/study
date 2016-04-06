@@ -1,20 +1,17 @@
 package Collection.Map.TreeMap;
 
 
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 public class _01_TreeMap {
     public static void main(String[] args) {
 
-        Map map = new TreeMap();
+        TreeMap map = new TreeMap();
         map.put(1,"a");
         map.put(5,"b");
-        map.put(2,"c");
-        map.put(4,"d");
-
+        map.put(2, "b");
+        map.put(4, "d");
+//        map.put(null, "e");//key不能为null
         Set set = map.entrySet();
         for(Iterator iter=set.iterator();iter.hasNext();){
             Map.Entry obj =(Map.Entry)iter.next();
@@ -22,5 +19,16 @@ public class _01_TreeMap {
             String value = (String)obj.getValue();
             System.out.println(key+":"+value); //按照key的升序打印出来
         }
+
+        System.out.println(map.ceilingEntry(5));
+        System.out.println(map.ceilingEntry(5).getKey());
+
+        NavigableSet<Integer> keySet = (NavigableSet<Integer>)map.keySet();
+        System.out.println(keySet.lower(2));
+        System.out.println(keySet.comparator());
+        Collection<String> collection = map.values();
+        collection.add("22");
+        System.out.println();
+//        keySet.lower()
     }
 }

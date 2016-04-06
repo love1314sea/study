@@ -6,7 +6,6 @@ import java.util.concurrent.*;
  * Created by wushang on 15/10/13.
  */
 
-
 class MyTest {
     private ExecutorService excutorService ;
     public MyTest() {

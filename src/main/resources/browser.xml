@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<bean id="BrowserAjaxWrappedMessage" class="Browser.WrappedMessage.BrowserAjaxWrappedMessage" >
+	</bean>
+
+	<bean id="BrowserJsErrorsWrappedMessage" class="Browser.WrappedMessage.BrowserJsErrorsWrappedMessage" >
+	</bean>
+	<bean id="PageWrappedMessageToApplicaitonOverviewBinKeyValueMessageHandler" class="Browser.Handler.PageWrappedMessageToApplicaitonOverviewBinKeyValueMessageHandler">
+	</bean>
+	<bean id="BrowserApplicationStatMessageHandler" abstract="true" class="Browser.Handler.BrowserApplicationStatMessageHandler" >
+	</bean>
+
+	<bean id="main" class="Browser.Main" >
+		<property name="messages" >
+			<list>
+				<ref bean="BrowserAjaxWrappedMessage" />
+				<ref bean="BrowserJsErrorsWrappedMessage" />
+			</list>
+		</property>
+		<property name="handlers">
+			<list>
+				<ref bean="PageWrappedMessageToApplicaitonOverviewBinKeyValueMessageHandler"/>
+				<ref bean="BrowserApplicationStatMessageHandler"/>
+			</list>
+		</property>
+	</bean>
+</beans>
