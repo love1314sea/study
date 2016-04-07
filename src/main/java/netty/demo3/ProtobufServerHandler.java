@@ -17,8 +17,20 @@ import java.util.Date;
 public class ProtobufServerHandler extends ChannelHandlerAdapter {
 
 //     the channelActive() method will be invoked when a connection is established and ready to generate traffic
+
+    @Override
+    public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("handlerAdded---------");
+    }
+
+    @Override
+    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("handlerRemoved---------");
+    }
+
     @Override
     public void channelActive(final ChannelHandlerContext ctx) { // (1)
+        System.out.println("channelActive--------");
 //        final ByteBuf time = ctx.alloc().buffer(4); // (2)
 //        time.writeInt((int) (System.currentTimeMillis() / 1000L + 2208988800L));
 //
@@ -36,6 +48,11 @@ public class ProtobufServerHandler extends ChannelHandlerAdapter {
 //            }
 //        }); // (4)
 //        f.addListener(ChannelFutureListener.CLOSE);
+    }
+
+    @Override
+    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("channelInactive------");
     }
 
     @Override
