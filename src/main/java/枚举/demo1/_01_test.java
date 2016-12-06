@@ -4,6 +4,8 @@ package 枚举.demo1;
  * Created by wushang on 15/10/12.
  */
 // 参考http://www.yiibai.com/javalang/enum_valueof.html 和flume代码
+
+//https://my.oschina.net/yotoo/blog/266466
 enum Mobile {
     Samsang(500),
     Nokia(200);

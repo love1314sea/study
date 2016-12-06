@@ -14,6 +14,10 @@ public class _01_System环境变量 {
         System.out.println(System.getProperty("hello"));
         Properties p = System.getProperties(); //主要是System类中静态成员函数，返回的是Properties类型
 
+        String userDir = System.getProperty("user.dir");
+        System.out.println(userDir);
+
+        System.out.println(System.getProperty("user.home"));
         //遍历1：
         Set set = p.keySet();
         for(Iterator iter=set.iterator(); iter.hasNext();) {
@@ -28,5 +32,6 @@ public class _01_System环境变量 {
         for(Object key : p.keySet()){
          //   System.out.println("--" + key + "=" + p.get(key));
         }
+
     }
 }

@@ -11,8 +11,9 @@ import java.util.Map;
 public class _1_jackson {
     public static void main(String[] args) throws Exception {
         Map<String, Object> map = new HashMap<>();
-        map.put("string", "hello");
         map.put("int", 1);
+
+        map.put("string", "hello");
         Map<String, String> innerMap = new HashMap<>();
         innerMap.put("in1", "1");
         innerMap.put("in2", "2");

@@ -1,6 +1,5 @@
 package netty.demo2;
 
-import com.sun.org.apache.xml.internal.resolver.helpers.BootstrapResolver;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

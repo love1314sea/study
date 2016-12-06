@@ -1,4 +1,3 @@
-import javafx.scene.control.Tab;
 
 /*
 1 构造对象时，先要初始化后成员变量，然后再调用构造函数

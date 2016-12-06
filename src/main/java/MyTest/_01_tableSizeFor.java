@@ -17,6 +17,12 @@ public class _01_tableSizeFor {
         System.out.print("n=" + n + " ");
         return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
     }
+    public static void test(int initialCapacity ) {
+        int cap = ((initialCapacity >= (MAXIMUM_CAPACITY >>> 1)) ?
+                           MAXIMUM_CAPACITY :
+                           tableSizeFor(initialCapacity + (initialCapacity >>> 1) + 1));
+        System.out.println("cap=" + cap);
+    }
     public static void main(String[] args) {
         System.out.println(tableSizeFor(-1));//n=-1 1
         System.out.println(tableSizeFor(0));//n=-1 1
@@ -24,5 +30,9 @@ public class _01_tableSizeFor {
         System.out.println(tableSizeFor(100));//n=127 128
         System.out.println(tableSizeFor(129));//n=255 256
         System.out.println(tableSizeFor(130));//n=255 256
+
+
+        System.out.println("-----");
+        test(100);
     }
 }

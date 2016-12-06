@@ -22,6 +22,7 @@ public class _01_newSingleThreadExecutor {
         es.execute(t2);
     }
 }
+
 class MyThread implements Runnable {
     @Override
     public void run() {

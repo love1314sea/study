@@ -8,6 +8,9 @@ import java.io.FileInputStream;
 /**
  * Created by wushang on 15/11/1.
  */
+/*
+既重写了findClass, 也重写了loadClass
+ */
 public class TestClassLoader extends ClassLoader {
 
     //定义文件所在目录

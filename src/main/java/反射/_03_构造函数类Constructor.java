@@ -10,6 +10,7 @@ public class _03_构造函数类Constructor {
        Class<?> classType = Student.class;
        //1 调用无参的构造函数，返回一个对象
        Constructor cons = classType.getConstructor(new Class[]{});//数组为空
+        System.out.println(cons.getName());
        Object obj = cons.newInstance(new Object[]{});//数组为空
        //以上两行等价于下面一行
        Object obj2 = classType.newInstance();

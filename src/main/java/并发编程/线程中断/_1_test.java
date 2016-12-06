@@ -48,18 +48,18 @@ class TestRunnable3 implements Runnable {
 }
 public class _1_test {
     public static void main(String[] args) throws InterruptedException {
-//        Thread thread = new Thread(new TestRunnable());
-//        thread.start();
-//        thread.interrupt(); //并没有中断cpu，终止线程的执行
-
+        Thread thread = new Thread(new TestRunnable());
+        thread.start();
+        thread.interrupt(); //并没有中断cpu，终止线程的执行
+//
 //        Thread thread2 = new Thread(new TestRunnable2());
 //        thread2.start();
 //        Thread.sleep(10);
 //        thread2.interrupt();
 
-        Thread thread3 = new Thread(new TestRunnable3());
-        thread3.start();
-        Thread.sleep(10);
-        thread3.interrupt();
+//        Thread thread3 = new Thread(new TestRunnable3());
+//        thread3.start();
+//        Thread.sleep(10);
+//        thread3.interrupt();
     }
 }

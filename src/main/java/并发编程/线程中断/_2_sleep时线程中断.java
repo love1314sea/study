@@ -9,7 +9,9 @@ class TestRunnable1 implements Runnable {
     public void run() {
         try {
             System.out.println("run-------");
-            Thread.sleep(100000);
+            while (true) {
+                Thread.sleep(100000);
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
             System.out.println("线程阻塞时被中断");
@@ -19,9 +21,10 @@ class TestRunnable1 implements Runnable {
 
 public class _2_sleep时线程中断 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Thread thread = new Thread(new TestRunnable1());
         thread.start();
+        Thread.sleep(1000);
         thread.interrupt();
     }
 }

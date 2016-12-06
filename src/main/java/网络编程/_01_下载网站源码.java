@@ -28,7 +28,8 @@ public class _01_下载网站源码 {
     }
 
     public static void test2() throws Exception {
-        URL url = new URL("http://www.sina.com");
+//        URL url = new URL("http://www.sina.com");
+        URL url = new URL("http://192.168.1.129:9200/_sql?sql=select * from tingyun-dc-201603 limit 10");
         //使用字符流
         BufferedReader br = new BufferedReader( new InputStreamReader( url.openStream()));
         String line = null;
@@ -39,7 +40,7 @@ public class _01_下载网站源码 {
     }
 
     public static void main(String[] args) throws Exception {
-        test1();
+//        test1();
         test2();
     }
 }

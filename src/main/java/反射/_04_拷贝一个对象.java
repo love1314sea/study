@@ -10,7 +10,7 @@ public class _04_拷贝一个对象 {
         Class<?> classType = object.getClass();
         Constructor cons = classType.getConstructor(new Class[]{});
         Object copyObject = cons.newInstance(new Object[]{});
-        Field[] fields = classType.getDeclaredFields();//不能使用getFields()，二者区别？？
+        Field[] fields = classType.getDeclaredFields();//不能使用getFields()
         for(Field field: fields) {
             String member = field.getName();
             String firstLetter = member.substring(0,1).toUpperCase();

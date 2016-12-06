@@ -15,7 +15,9 @@ public class _02_newFixedThreadPool {
         es.execute(t1);
         es.execute(t2);
         es.execute(t3);//因为池中只有两个线程，因此第三个会等待
+        System.out.println("main over---");
 
+        es.shutdownNow();
     }
 }
 class MyThread_02 implements Runnable {
@@ -27,7 +29,7 @@ class MyThread_02 implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("Thread-" + i);
+            System.out.println(Thread.currentThread().getName() + ":"  + i);
         }
     }
 }

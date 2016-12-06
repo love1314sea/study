@@ -14,7 +14,6 @@ public class _02_FileOutputStream {
         byte[] buffer = str.getBytes();
         os.write(buffer);
         os.close();
-
         os = new FileOutputStream("d:/a.txt",true);//追加
         os.close();
 

@@ -37,7 +37,12 @@ public class _1 {
         List<String> list = new ArrayList<>();
         list.add("3");
 //        list.r
-
+        if(s.getClass() == Student.class ) {
+            System.out.println("yes ------");
+        }
+        if(s.getClass().equals( Student.class ) ){
+            System.out.println("yes 2 ------");
+        }
     }
 }
 

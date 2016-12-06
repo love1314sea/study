@@ -23,7 +23,17 @@ public class _01_普通map的错误 {
                 scores.put("liu",12);
             }
         }catch (Exception ex) {
-            System.out.println("Fail:" + ex);
+            System.out.println("traverse key fail:" + ex);
+        }
+
+        try {
+            for (final Integer value : scores.values()) {
+                scores.put("liu", 13); // 对已存在的key更新不抛异常
+//                scores.put("zhao", 13);
+                System.out.println(value);
+            }
+        }catch (Exception ex){
+            System.out.println("traverse value fail:" + ex);
         }
     }
     public static void main(String[] args) {

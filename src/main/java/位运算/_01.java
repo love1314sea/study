@@ -13,5 +13,8 @@ public class _01 {
         System.out.println(j);
         System.out.println(k);
 
+        int s = -1;
+        System.out.println(s >> 10);
+
     }
 }

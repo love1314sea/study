@@ -29,5 +29,8 @@ public class _01_Collects类中函数测试 {
 
         System.out.println("max=" + Collections.max(list));
         System.out.println("min=" + Collections.min(list));
+
+
+
     }
 }

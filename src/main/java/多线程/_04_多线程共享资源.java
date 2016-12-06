@@ -12,9 +12,11 @@ public class _04_多线程共享资源 {
         //使用构造函数Thread(Runnable target)
         Thread t1 = new Thread(r);  // 使用同一个线程对象，创建了两个线程，两个线程共享成员变量，成员变量互相影响。
         Thread t2 = new Thread(r);
-
+//        t1.setDaemon(true);
+//        t2.setDaemon(true);
         t1.start(); //启动多线程必须使用start(),不能调用run()
         t2.start();
+        System.out.println("main over-----");
     }
 }
 
