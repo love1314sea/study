@@ -16,10 +16,10 @@ import java.util.concurrent.ExecutionException;
 //   http://outofmemory.cn/java/guava/cache/how-to-use-guava-cache
 public class _01_test {
 	public static void main(String[] args) throws ExecutionException {
-		LoadingCache<String, String> loadingCache = CacheBuilder.newBuilder().build(
+		LoadingCache<String, String> loadingCache = CacheBuilder.newBuilder().maximumSize(1).build(
 				new CacheLoader<String, String>() {
 					@Override
-					public String load(String s) throws Exception {
+					public String load(String s) {
 						System.out.println("new load:" + s);
 						return "hello " + s;
 					}
@@ -39,6 +39,7 @@ public class _01_test {
 		System.out.println(loadingCache.get("wu"));
 		System.out.println(loadingCache.get("zhao"));
 		System.out.println(loadingCache.get("zhao"));
+		System.out.println(loadingCache.get("wu"));
 
 		System.out.println("-----------");
 

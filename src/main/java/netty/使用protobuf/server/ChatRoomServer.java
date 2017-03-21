@@ -10,11 +10,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufDecoder;
 import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
-import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import netty.使用protobuf.StudentOuterClass;
 
 /**
@@ -60,7 +58,8 @@ public class ChatRoomServer {
                 .childHandler(new ChannelInitializer<SocketChannel>() { // (4)
                     @Override
                     public void initChannel(SocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new DelimiterBasedFrameDecoder(8042, DELIMITER_BUF));
+//                        ch.pipeline().addLast(new DelimiterBasedFrameDecoder(8042, DELIMITER_BUF));
+                        ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
                         ch.pipeline().addLast(new ProtobufDecoder(StudentOuterClass.Student.getDefaultInstance()));
                         ch.pipeline().addLast(new ProtobufEncoder());
                         ch.pipeline().addLast(new ChatRoomServerHandler());

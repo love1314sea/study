@@ -14,8 +14,8 @@
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 
 	<!--<bean id="perform" class="spring.demo1.Player"> 面向接口编程：改变代码中的行为，只需改变spring配置文件-->
-	<!--<bean id="perform" class="spring.demo1.Juggler">-->
-	<!--</bean>-->
+	<bean id="perform" class="spring.demo1.Juggler">
+	</bean>
 
 	<!--<bean id="juggler" class="spring.demo1.Juggler" >-->
 		<!--<constructor-arg value="5"/>-->

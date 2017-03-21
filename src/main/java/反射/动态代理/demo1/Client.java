@@ -14,7 +14,7 @@ public class Client {
 		Subject realSubject = new RealSubject();
 
 		//    我们要代理哪个真实对象，就将该对象传进去，最后是通过该真实对象来调用其方法的
-		InvocationHandler handler = new DynamicProxy(realSubject);
+		InvocationHandler handler = new SubjectInvocationHandler(realSubject);
 
         /*
          * 通过Proxy的newProxyInstance方法来创建我们的代理对象，我们来看看其三个参数

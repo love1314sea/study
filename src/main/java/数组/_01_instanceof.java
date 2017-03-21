@@ -1,5 +1,8 @@
 package 数组;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //instancof来测试它所指向的对象是否是某类的一个实例，
 public class _01_instanceof {
 
@@ -8,5 +11,8 @@ public class _01_instanceof {
         System.out.println(arr instanceof Object);
         System.out.println(arr[0] instanceof int[]);//arr[0]是一维数组
         System.out.println(arr[0] instanceof Object);
+
+        List<Object> list = new ArrayList<>();
+        list.add("zhang");
     }
 }

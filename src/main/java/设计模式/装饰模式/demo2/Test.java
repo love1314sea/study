@@ -13,4 +13,4 @@ public class Test {
 		System.out.println(beverage.getDescription()+"\n加了摩卡和牛奶的咖啡价格："+beverage.getPrice());
 
 	}
-}  
+}

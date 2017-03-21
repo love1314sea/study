@@ -28,7 +28,7 @@
         <bean id="juggler2" class="spring.demo3.PoetciJuggler">
             <property name="bagBeans" value="2" />
             <property name="poem" >
-                <bean class="spring.demo3.PoemLiBai" /> <!-- 注入内部的bean-->
+                <bean class="spring.demo3.PoemLiBai" /><!-- 注入内部的bean-->
             </property>
         </bean>
 

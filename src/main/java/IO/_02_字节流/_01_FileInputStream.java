@@ -16,5 +16,6 @@ public class _01_FileInputStream {
             System.out.println(str);
         }
         is.close();
+
     }
 }

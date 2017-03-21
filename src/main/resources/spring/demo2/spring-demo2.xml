@@ -25,18 +25,8 @@
         <property name="ignoreResourceNotFound" value="true" /><!-- 如果不设置，spring 配置的文件找不到会报错-->
     </bean>
 
-    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
-        <!--<property name="locations">-->
-            <!--<list>-->
-                <!--<value>classpath:conf.properties</value>-->
-                <!--<value>file:/opt/tingyun/dc-browser-aggr/conf/conf-deploy.properties</value>-->
-                <!--<value>classpath:conf.local/conf-deploy.properties</value>-->
-            <!--</list>-->
-        <!--</property>-->
-        <!--<property name="fileEncoding" value="UTF-8"/>-->
-        <!--<property name="ignoreResourceNotFound" value="true"/>-->
-    <!--</bean>-->
-
+    <!--或者-->
+    <context:property-placeholder location="classpath:spring/demo2/conf.properties"/>
 
     <bean id="datadao" class="spring.demo2_配置文件.DataDao" >
         <property name="userName" value="${username}" />

@@ -9,14 +9,20 @@ import java.io.OutputStream;
 public class _02_FileOutputStream {
 
     public static void main(String[] args) throws IOException {
-        OutputStream os = new FileOutputStream("d:/a.txt");//无则创建，有则清空内容，再写
+        OutputStream os = new FileOutputStream("./a.txt");//无则创建，有则清空内容，再写
         String str = "hello world";
         byte[] buffer = str.getBytes();
         os.write(buffer);
         os.close();
-        os = new FileOutputStream("d:/a.txt",true);//追加
+        os = new FileOutputStream("./a.txt",true);//追加
         os.close();
 
+
+        FileOutputStream fos = new FileOutputStream("./txt");
+        fos.write(500);
+        fos.close();
+
+	    System.out.println(500 & 0xFF);
     }
 
 }

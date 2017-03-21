@@ -16,6 +16,7 @@ public class ServerHandler extends ChannelHandlerAdapter {
         System.out.println("NO." + count.incrementAndGet() + " 连接");
     }
 
+
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
 

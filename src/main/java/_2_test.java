@@ -1,3 +1,5 @@
+import io.netty.buffer.ByteBuf;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -6,15 +8,26 @@ import java.util.regex.Pattern;
  */
 public class _2_test {
 
-	public static void main(String[] args) {
-		SS s = new SS();
-		s.ss = "hello world";
+	public static String readDataVersion(byte[] bytes) throws Exception {
 
-		String str = s.ss;
-		String s1 = str.substring(0,5);
-		System.out.println(s1);
-		System.out.println(str);
-		System.out.println(s.ss);
+		int last = 2;//0.0.0
+		if (bytes[bytes.length - 1] > 0) {
+			last = 3;//0.0.0.0
+		}
+
+		StringBuilder sb = new StringBuilder();
+		for (int j = 0; j <= last; j++) {
+			sb.append(bytes[j]);
+			if (j != last) {
+				sb.append(".");
+			}
+		}
+		return sb.toString();
+	}
+
+	public static void main(String[] args) throws Exception{
+		byte[] bytes = new byte[]{1,2,0,0};
+		System.out.println(_2_test.readDataVersion(bytes));
 	}
 }
 class SS {

@@ -53,11 +53,11 @@ public class NettyClient {
     }
 
     public static void main(String[] args) throws Exception {
-//        String ip = "192.168.2.132";
-        String ip = args[0];
+        String ip = "127.0.0.1";
+//        String ip = args[0];
 
         final int port = 9999;
-        int connectNum = 10;
+        int connectNum = 1;
         if (args != null && args.length > 0) {
             connectNum = Integer.parseInt(args[1]);
         }

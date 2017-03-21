@@ -15,6 +15,7 @@ public class _02_自定义序列化方式  {
         FileOutputStream fos = new FileOutputStream("D:\\test\\p.txt");
         //序列化使用ObjectOutputStream，它是过滤流
         ObjectOutputStream oos = new ObjectOutputStream(fos);
+//        oos.write(5);
         oos.writeObject(p1);
         oos.writeObject(p2);
         oos.close();
@@ -22,6 +23,7 @@ public class _02_自定义序列化方式  {
         FileInputStream fin = new FileInputStream("D:\\test\\p.txt");
         //反序列化使用ObjectInputStream类，也是过滤流
         ObjectInputStream ois = new ObjectInputStream(fin);
+//        System.out.println(ois.read());
         Person2 a1 = (Person2)ois.readObject();//readObject返回值是Object，必须要转换类型
         System.out.println(a1.age);
         System.out.println(a1.height);//height未被序列化，得到0.0，但不抛出异常

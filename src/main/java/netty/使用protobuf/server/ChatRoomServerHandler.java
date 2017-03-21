@@ -8,6 +8,9 @@ import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.util.concurrent.GlobalEventExecutor;
 import netty.使用protobuf.StudentOuterClass;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by wushang on 16/4/7.
  */
@@ -58,8 +61,14 @@ public class ChatRoomServerHandler extends ChannelHandlerAdapter {
         StudentOuterClass.Student student = (StudentOuterClass.Student)msg;
         System.out.println("name=" + student.getName());
         System.out.println("age=" + student.getAge());
+        List<String> list = student.getLesssonsList();
+        for(String str : list) {
+            System.out.println(str);
+        }
+
 
         StudentOuterClass.Student student2 = StudentOuterClass.Student.newBuilder().setAge(44).setName("li").build();
+
         channel.writeAndFlush(student2);
         System.out.println("server channelRead over---");
     }

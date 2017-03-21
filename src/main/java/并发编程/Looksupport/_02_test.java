@@ -35,6 +35,7 @@ public class _02_test {
 
 		Thread.sleep(2000);
 
+//		LockSupport.unpark(t);
 		// 中断线程
 		t.interrupt();//线程如果因为调用park而阻塞的话，能够响应中断请求(中断状态被设置成true)，但是不会抛出InterruptedException
 

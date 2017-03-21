@@ -16,5 +16,7 @@ public class _01 {
         int s = -1;
         System.out.println(s >> 10);
 
+        System.out.println(15&11111155);
+        System.out.println(15 & -3);
     }
 }

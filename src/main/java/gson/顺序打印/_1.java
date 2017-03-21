@@ -2,12 +2,8 @@ package gson.顺序打印;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
-import org.codehaus.jackson.JsonEncoding;
 import org.codehaus.jackson.JsonFactory;
 import org.codehaus.jackson.JsonGenerator;
-import org.codehaus.jackson.map.SerializerProvider;
 
 import java.io.*;
 import java.util.*;

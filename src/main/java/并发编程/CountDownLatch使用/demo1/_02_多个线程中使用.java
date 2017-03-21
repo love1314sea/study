@@ -6,7 +6,7 @@ import java.util.concurrent.CountDownLatch;
  * Created by wushang on 16/10/4.
  */
 public class _02_多个线程中使用 {
-	static CountDownLatch countDownLatch = new CountDownLatch(1);
+	static CountDownLatch countDownLatch = new CountDownLatch(2);
 
 
 	public static void main(String[] args) throws Exception{
