@@ -20,7 +20,7 @@ public class _02_debug {
 
 
 		Consumer c1 = new Consumer("c1", queue);
-//		Consumer c2 = new Consumer("c2", queue);
+//		Supplier c2 = new Supplier("c2", queue);
 		c1.start();
 		Thread.sleep(1000);
 //		c2.start();

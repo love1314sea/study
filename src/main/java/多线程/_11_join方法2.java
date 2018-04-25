@@ -13,7 +13,8 @@ public class _11_join方法2 {
 			thread.start();
 			previous = thread;
 		}
-		Thread.sleep(100);
+		Thread.sleep(1000);
+		System.out.println("main over--");
 	}
 }
 

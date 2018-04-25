@@ -6,6 +6,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import netty.demo3.entity.RequestMessage;
 import protobuf.demo2.SimpleTypeTest;
 
@@ -14,7 +15,7 @@ import java.util.Date;
 /**
  * Created by wushang on 16/2/17.
  */
-public class ProtobufServerHandler extends ChannelHandlerAdapter {
+public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 
 //     the channelActive() method will be invoked when a connection is established and ready to generate traffic
 

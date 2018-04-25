@@ -45,7 +45,7 @@ public class _02_时间格式转换 {
 
     public static void main(String[] args) throws ParseException {
         Date date = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         String s = dateFormat.format(date);
         System.out.println(s);

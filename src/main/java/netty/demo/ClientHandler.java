@@ -3,6 +3,7 @@ package netty.demo;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.*;
 
 import java.net.URI;
@@ -12,7 +13,7 @@ import java.util.Date;
  * Created by wushang on 16/4/14.
  */
 
-public class ClientHandler extends ChannelHandlerAdapter {
+public class ClientHandler extends ChannelInboundHandlerAdapter {
 
     //    private final ByteBuf firstMessage;
 

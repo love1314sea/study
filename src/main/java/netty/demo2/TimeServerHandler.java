@@ -2,17 +2,14 @@ package netty.demo2;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelFutureListener;
-import io.netty.channel.ChannelHandlerAdapter;
-import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.*;
 
 import java.util.Date;
 
 /**
  * Created by wushang on 16/2/17.
  */
-public class TimeServerHandler extends ChannelHandlerAdapter {
+public class TimeServerHandler extends SimpleChannelInboundHandler<String> {
 
 //     the channelActive() method will be invoked when a connection is established and ready to generate traffic
     @Override
@@ -34,6 +31,11 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
 //            }
 //        }); // (4)
 //        f.addListener(ChannelFutureListener.CLOSE);
+    }
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext ctx, String msg) {
+
     }
 
     @Override

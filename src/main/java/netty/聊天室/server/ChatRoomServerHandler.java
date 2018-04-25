@@ -3,6 +3,7 @@ package netty.聊天室.server;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
@@ -12,7 +13,7 @@ import io.netty.util.concurrent.GlobalEventExecutor;
 /**
  * Created by wushang on 16/4/7.
  */
-public class ChatRoomServerHandler extends ChannelHandlerAdapter {
+public class ChatRoomServerHandler extends ChannelInboundHandlerAdapter {
 
     //这个要定义成静态的,所有的客户端 只对一个服务端
     private static ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);

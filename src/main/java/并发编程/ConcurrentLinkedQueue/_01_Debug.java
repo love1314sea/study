@@ -10,9 +10,12 @@ public class _01_Debug {
 
 	public static void main(String[] args) {
 		Queue<String> queue = new ConcurrentLinkedQueue<>();
+		queue.poll();
 
-		queue.add("hello");
-		queue.add("world");
-		queue.add("zhang");
+
+//		queue.add("hello");
+//		queue.add("world");
+//		queue.add("zhang");
 	}
 }
+

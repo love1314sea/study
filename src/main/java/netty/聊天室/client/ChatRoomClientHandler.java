@@ -7,7 +7,6 @@ import io.netty.channel.ChannelHandlerContext;
  * Created by wushang on 16/4/7.
  */
 public class ChatRoomClientHandler extends ChannelHandlerAdapter {
-    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println((String)msg);
     }

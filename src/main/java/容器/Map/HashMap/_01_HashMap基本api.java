@@ -16,6 +16,9 @@ public class _01_HashMap基本api {
         map.put("a","zhaoliu"); //对于已存在的key，也能存进去，但会把value替换
         System.out.println(map);
 
+//        map.remove("c");
+        System.out.println(map);
+
         String value = (String)map.get("a");
         String value_ = (String)map.get("b");
         System.out.println(value_);
@@ -27,5 +30,10 @@ public class _01_HashMap基本api {
         }else {
             System.out.println(value2);
         }
+
+        System.out.println(7&7);
+        System.out.println(7&8);
+        System.out.println(15&7);
+        System.out.println(15&8);
     }
 }

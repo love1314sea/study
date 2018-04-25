@@ -33,6 +33,6 @@ public class _01_tableSizeFor {
 
 
         System.out.println("-----");
-        test(100);
+        test(256);
     }
 }

@@ -21,6 +21,7 @@ class Worker implements Runnable {
 			TimeUnit.SECONDS.sleep(i);
 			System.out.println("working ----:" + i);
 			cb.await();
+			//do something
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (BrokenBarrierException e) {
@@ -38,11 +39,12 @@ class Worker2 implements Runnable {
 
 	public void run() {
 		try {
-			Thread.currentThread().interrupt();//中断当前线程
+//			Thread.currentThread().interrupt();//中断当前线程
 			int i = new Random().nextInt(10);
 //			TimeUnit.SECONDS.sleep(1000);
 			System.out.println("working2 ----:" + i);
 			cb.await();
+			//do something
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (BrokenBarrierException e) {

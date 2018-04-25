@@ -2,12 +2,13 @@ package netty.使用protobuf.client;
 
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import netty.使用protobuf.StudentOuterClass;
 
 /**
  * Created by wushang on 16/4/7.
  */
-public class ChatRoomClientHandler extends ChannelHandlerAdapter {
+public class ChatRoomClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("client channelRead---");

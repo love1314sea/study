@@ -1,4 +1,4 @@
-package 并发编程.Looksupport;
+package 并发编程.LookSupport;
 
 /**
  * Created by wushang on 16/11/10.

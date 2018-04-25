@@ -8,6 +8,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * Created by wushang on 16/4/13.
  */
+//问题：
 public class ServerHandler extends ChannelHandlerAdapter {
     private static AtomicLong count = new AtomicLong(0);
 

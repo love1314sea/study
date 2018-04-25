@@ -10,8 +10,12 @@ public class _01 {
     public static void main(String[] args) throws Exception{
         AtomicLong counter = new AtomicLong(0);
         counter.addAndGet(5);
-        synchronized (counter) {
-            counter.wait(3000);//里面是毫秒
+//        synchronized (counter) {
+//            counter.wait(3000);//里面是毫秒
+//        }
+        Object lock = new Object();
+        synchronized (lock) {
+            lock.wait(10000);
         }
 //        Arrays.hashCode(new byte[]{})
         System.out.println(counter.get());

@@ -30,6 +30,4 @@ public class _04_ByteArrayOutputStream {
         os.close();
 
     }
-
-
 }

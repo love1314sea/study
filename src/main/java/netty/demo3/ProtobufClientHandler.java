@@ -6,13 +6,14 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import netty.demo3.entity.MobileCrashRequestMessage;
 import netty.demo3.entity.RequestMessage;
 
 /**
  * Created by wushang on 16/3/31.
  */
-public class ProtobufClientHandler extends ChannelHandlerAdapter {
+public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 //    private final static String DELIMITER = System.getProperty("line.separator");
     private final static String DELIMITER = "$_";
     private final static ByteBuf DELIMITER_BUF;
