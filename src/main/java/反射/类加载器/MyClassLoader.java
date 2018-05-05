@@ -18,7 +18,7 @@ public class MyClassLoader extends ClassLoader {
 
 	private String name; // 类加载器的名字
 
-	private String path = "d://"; // 加载类的路径
+	private String path = "d://"; // 加载类的根路径
 
 	private final String fileType = ".class"; // .class文件扩展名
 
@@ -88,9 +88,13 @@ public class MyClassLoader extends ClassLoader {
 
 	/**
 	 * JVM调用的加载器的方法
+	 * //参数传入的是全类名  xxx.xxxx.xxx.xxxxx.AAA
+	 *  1 根据传入的类名， -》 找到磁盘上的文件
+	 *  2 读取文件，获得二进制流
+	 *  3 解析成 Class对象，放入堆中
 	 */
 
-	@Override
+	@Override  //参数传入的是全类名  xxx.xxxx.xxx.xxxxx.AAA
 	protected Class<?> findClass(String name) throws ClassNotFoundException {
 		byte[] data = this.loadClassData(name);
 //		return this.defineClass(name, data, 0, data.length);

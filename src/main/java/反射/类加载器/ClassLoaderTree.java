@@ -17,6 +17,7 @@ public class ClassLoaderTree {
 		System.out.println(classLoader);
 
 		System.out.println(ClassLoader.getSystemClassLoader());
+		System.out.println(System.getProperty("java.class.path"));
 	}
 }
 
