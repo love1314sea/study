@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GB2312"?>
+<connection-pool>
+
+    <!--最优配置-->
+    <proxool>
+        <alias>wushangtest</alias>
+        <driver-url>jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;useSSL=false</driver-url>
+        <driver-class>com.mysql.jdbc.Driver</driver-class>
+        <driver-properties>
+            <property name="user" value="root"/>
+            <property name="password" value="2015"/>
+        </driver-properties>
+
+        <maximum-connection-count>100</maximum-connection-count>
+        <minimum-connection-count>10</minimum-connection-count>
+        <maximum-connection-lifetime>18000000</maximum-connection-lifetime>
+        <prototype-count>3</prototype-count>
+        <test-before-use>true</test-before-use>
+        <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+
+        <statistics>15m,45m,1d</statistics>
+        <statistics-log-level>WARN</statistics-log-level>
+        <fatal-sql-exception>Connection is closed,SQLSTATE=08003,Error opening socket. SQLSTATE=08S01,SQLSTATE=08S01</fatal-sql-exception>
+        <fatal-sql-exception-wrapper-class>org.logicalcobwebs.proxool.FatalRuntimeException</fatal-sql-exception-wrapper-class>
+        <verbose>false</verbose>
+    </proxool>
+
+</connection-pool>

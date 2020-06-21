@@ -1,6 +1,5 @@
 package 设计模式._05_多线程Future模式;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 
 /**
  * @author wushang@tingyun.com
